@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@astracms/astro-loader':
-        specifier: ^0.1.2
-        version: 0.1.2(astro@5.16.5(@types/node@25.0.1)(rollup@4.53.3)(typescript@5.9.3))
+        specifier: ^1.0.0
+        version: 1.0.0(astro@5.16.5(@types/node@25.0.1)(rollup@4.53.3)(typescript@5.9.3))
       '@astrojs/mdx':
         specifier: ^4.3.13
         version: 4.3.13(astro@5.16.5(@types/node@25.0.1)(rollup@4.53.3)(typescript@5.9.3))
@@ -29,13 +29,13 @@ importers:
 
 packages:
 
-  '@astracms/astro-loader@0.1.2':
-    resolution: {integrity: sha512-9k8y3aJHBsy9PKpomUHFwjEUqcSKShiDWDiA6HKVC3WA9yZAepITd2gK5ocFw0C2T0+RgTALZP8ZF2LM6W4ksQ==}
+  '@astracms/astro-loader@1.0.0':
+    resolution: {integrity: sha512-dWTzRcwBfy9jxXO1nQ1sfh4M0GaaDcvUYvkKqcPThyLZdnQwru5MZf6+qxIJm7gFzDZqGBVg05nqd5TkXHxvBg==}
     peerDependencies:
       astro: ^5.0.0
 
-  '@astracms/core@0.1.0':
-    resolution: {integrity: sha512-7fFvIPjKgQLyoINHfEsVCTstn9dsz47/Mq89b5tn57Ao1juEv8qM5nayavM0bVEF2BINQ/s1klWb9Uk0eAZd0w==}
+  '@astracms/core@1.0.0':
+    resolution: {integrity: sha512-1uddi+7yJJJYh0lhZ3iFOLd6R/TPLbyF7cDUpVqeW8RboNuxBMt9n7IdkunZ4tia9hay4spKyxlGMtVcn/mKeg==}
 
   '@astrojs/compiler@2.13.0':
     resolution: {integrity: sha512-mqVORhUJViA28fwHYaWmsXSzLO9osbdZ5ImUfxBarqsYdMlPbqAqGJCxsNzvppp1BEzc1mJNjOVvQqeDN8Vspw==}
@@ -1710,13 +1710,13 @@ packages:
 
 snapshots:
 
-  '@astracms/astro-loader@0.1.2(astro@5.16.5(@types/node@25.0.1)(rollup@4.53.3)(typescript@5.9.3))':
+  '@astracms/astro-loader@1.0.0(astro@5.16.5(@types/node@25.0.1)(rollup@4.53.3)(typescript@5.9.3))':
     dependencies:
-      '@astracms/core': 0.1.0
+      '@astracms/core': 1.0.0
       astro: 5.16.5(@types/node@25.0.1)(rollup@4.53.3)(typescript@5.9.3)
       zod: 3.25.76
 
-  '@astracms/core@0.1.0':
+  '@astracms/core@1.0.0':
     dependencies:
       zod: 3.25.76
 

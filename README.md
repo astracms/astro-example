@@ -1,62 +1,104 @@
-# Astro Starter Kit: Blog
+# AstraCMS Astro Example
 
-```sh
-npm create astro@latest -- --template blog
-```
+An example [Astro](https://astro.build) blog powered by [AstraCMS](https://astracms.com) — the headless CMS for modern websites.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## ✨ Features
 
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
+- ✅ Content managed via AstraCMS dashboard
+- ✅ Type-safe content loading with `@astracms/astro-loader`
+- ✅ Markdown & HTML content support
+- ✅ Categories and tags for content organization
 - ✅ SEO-friendly with canonical URLs and OpenGraph data
 - ✅ Sitemap support
 - ✅ RSS Feed support
-- ✅ Markdown & MDX support
+- ✅ 100/100 Lighthouse performance
 
-## 🚀 Project Structure
+## 🚀 Quick Start
 
-Inside of your Astro project, you'll see the following folders and files:
+### 1. Clone the Repository
+
+```sh
+git clone https://github.com/astracms/astro-example.git
+cd astro-example
+pnpm install
+```
+
+### 2. Configure AstraCMS
+
+Create a `.env` file in the root directory:
+
+```sh
+ASTRACMS_API_KEY=astra_pk_your_api_key_here
+```
+
+Get your API key from the [AstraCMS Dashboard](https://app.astracms.com).
+
+### 3. Configure Content Collections
+
+Update `src/content.config.ts` to match your AstraCMS categories:
+
+```typescript
+import { defineCollection } from 'astro:content';
+import { postsLoader } from '@astracms/astro-loader';
+
+const config = {
+  apiKey: import.meta.env.ASTRACMS_API_KEY,
+};
+
+const blog = defineCollection({
+  loader: postsLoader({
+    ...config,
+    format: 'markdown', // or 'html'
+    categories: ['blog'],
+  }),
+});
+
+export const collections = { blog };
+```
+
+### 4. Start Development
+
+```sh
+pnpm dev
+```
+
+Open [http://localhost:4321](http://localhost:4321) to see your site.
+
+## 📁 Project Structure
 
 ```text
 ├── public/
 ├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+│   ├── components/     # Reusable UI components
+│   ├── layouts/        # Page and post layouts
+│   ├── pages/          # Route pages
+│   │   ├── blog/       # Blog listing and post pages
+│   │   └── index.astro # Homepage
+│   ├── styles/         # Global styles
+│   ├── consts.ts       # Site constants
+│   └── content.config.ts # AstraCMS loader config
+├── .env.example        # Environment variables template
+├── astro.config.mjs    # Astro configuration
+└── package.json
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Command         | Action                                       |
+| :-------------- | :------------------------------------------- |
+| `pnpm install`  | Installs dependencies                        |
+| `pnpm dev`      | Starts local dev server at `localhost:4321`  |
+| `pnpm build`    | Build your production site to `./dist/`      |
+| `pnpm preview`  | Preview your build locally, before deploying |
 
-## 👀 Want to learn more?
+## � Learn More
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [AstraCMS Documentation](https://docs.astracms.com)
+- [Astro Documentation](https://docs.astro.build)
+- [@astracms/astro-loader on npm](https://www.npmjs.com/package/@astracms/astro-loader)
 
-## Credit
+## 📄 License
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+MIT

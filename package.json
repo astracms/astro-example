@@ -1,5 +1,6 @@
 {
-  "name": "astro-example",
+  "name": "@astracms/astro-example",
+  "description": "An example Astro blog powered by AstraCMS",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,10 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astracms/astro-loader": "^0.1.2",
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
     "astro": "^5.16.5",
     "sharp": "^0.34.3"
-  }
+  },
+  "packageManager": "pnpm@10.25.0"
 }

@@ -1,8 +1,8 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
@@ -13,35 +13,73 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<h1>🚀 AstraCMS + Astro</h1>
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
+				Welcome to the official <a href="https://astracms.com"
+					>AstraCMS</a
+				> example for
+				<a href="https://astro.build/">Astro</a>. This template
+				demonstrates how to build a blazing-fast blog using Astro with
+				content managed through AstraCMS.
 			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
+			<h2>✨ Features</h2>
 			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+				<li>
+					<strong>Headless CMS</strong> — Manage your content in AstraCMS
+					dashboard
+				</li>
+				<li>
+					<strong>Type-safe</strong> — Full TypeScript support with the
+					<code>@astracms/astro-loader</code>
+				</li>
+				<li>
+					<strong>Markdown & HTML</strong> — Write content in your preferred
+					format
+				</li>
+				<li>
+					<strong>Categories & Tags</strong> — Organize content with taxonomies
+				</li>
+				<li>
+					<strong>SEO-friendly</strong> — Canonical URLs and OpenGraph data
+					included
+				</li>
+				<li>
+					<strong>RSS Feed</strong> — Built-in RSS support for your blog
+				</li>
+				<li><strong>Sitemap</strong> — Automatic sitemap generation</li>
+			</ul>
+			<h2>🛠️ Getting Started</h2>
+			<ol>
+				<li>
+					Sign up for <a href="https://astracms.com">AstraCMS</a> and create
+					a workspace
+				</li>
+				<li>Add your API key to <code>.env</code> file</li>
+				<li>
+					Configure your categories in <code
+						>src/content.config.ts</code>
+				</li>
+				<li>
+					Run <code>pnpm dev</code> to start the development server
+				</li>
+			</ol>
+			<h2>📁 Project Structure</h2>
+			<ul>
+				<li>
+					<code>src/content.config.ts</code> — AstraCMS loader configuration
+				</li>
+				<li>
+					<code>src/pages/blog/</code> — Blog listing and post pages
+				</li>
+				<li><code>src/layouts/</code> — Page and post layouts</li>
+				<li><code>src/components/</code> — Reusable UI components</li>
 			</ul>
 			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+				<a href="/blog">→ View the Blog</a>
 			</p>
 			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+				For more information, check out the
+				<a href="https://docs.astracms.com">AstraCMS Documentation</a>.
 			</p>
 		</main>
 		<Footer />
